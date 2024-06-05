@@ -23,7 +23,8 @@ sudo apt-get update -y &&
         cd build_cmake
       fi
     ../bootstrap --prefix=/usr --disable-werror &&
-    make "-j$(nproc)" &&
+    # make "-j$(nproc)" &&
+    make "-j2" &&
     sudo make install-tiledb DESTDIR="/build_thirdparty" &&
     sudo make install-tiledb &&
     cd ../.. &&
