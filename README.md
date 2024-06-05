@@ -11,3 +11,15 @@ bash setup_proj.sh
 bash setup_geos.sh
 bash setup_gdal.sh
 ```
+
+* Verificar versión.
+
+```console
+ogrinfo --version
+```
+
+* Verificar debe tener formato geo parquet.
+
+```console
+ogrinfo --formats | grep -i --color 'parquet'
+```
