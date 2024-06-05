@@ -9,13 +9,13 @@
 
 ## tiledb
 GCC_ARCH="$(uname -m)"
-export TILEDB_VERSION=2.16.3
-# sudo apt-get update -y &&
-#     DEBIAN_FRONTEND=noninteractive sudo apt-get install --no-install-recommends -y \
-#         libspdlog-dev &&
-    # mkdir tiledb &&
-    # wget -c -q https://github.com/TileDB-Inc/TileDB/archive/${TILEDB_VERSION}.tar.gz -O - |
-    # tar xz -C tiledb --strip-components=1 &&
+export TILEDB_VERSION=2.23.0
+sudo apt-get update -y &&
+    DEBIAN_FRONTEND=noninteractive sudo apt-get install --no-install-recommends -y \
+        libspdlog-dev
+    if [[ ! -d tiledb ]] ; then mkdir tiledb ; fi
+    wget -c -q https://github.com/TileDB-Inc/TileDB/archive/${TILEDB_VERSION}.tar.gz -O - \
+      | tar xz -C tiledb --strip-components=1
     cd tiledb &&
       if [[ ! -d build_cmake ]]; then
         mkdir build_cmake && cd build_cmake
