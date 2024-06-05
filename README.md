@@ -16,10 +16,12 @@ bash setup_gdal.sh
 
 ```console
 ogrinfo --version
+GDAL 3.9.0, released 2024/05/07
 ```
 
 * Verificar debe tener formato geo parquet.
 
 ```console
 ogrinfo --formats | grep -i --color 'parquet'
+  Parquet -vector- (rw+v): (Geo)Parquet (*.parquet)
 ```
